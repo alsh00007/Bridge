@@ -1,0 +1,22 @@
+group 'StructuralPatternsTasks'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.sun.faces:jsf-api:2.2.9'
+    compile 'com.sun.faces:jsf-impl:2.2.9'
+    compile 'org.javassist:javassist:3.19.0-GA'
+    compile 'jstl:jstl:1.2'
+}
+
+war {
+    from 'src/rootContent'
+}
